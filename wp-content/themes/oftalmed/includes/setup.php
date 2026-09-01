@@ -37,3 +37,22 @@ add_filter( 'nav_menu_link_attributes', function( $atts, $item, $args ) {
     }
     return $atts;
 }, 10, 3 );
+
+
+// ACF Blocks registration
+add_action('init' , function () {
+    $blocks = glob(get_template_directory() . '/blocks/*/block.json');
+
+    foreach ($blocks as $block) {
+        register_block_type($block);
+    }
+});
+
+add_action('after_setup_theme', function() {
+    add_theme_support('editor-styles');
+    add_editor_style('assets/css/app.min.css');
+});
+
+add_action( 'after_setup_theme', function() {
+    add_theme_support( 'align-wide' );
+});

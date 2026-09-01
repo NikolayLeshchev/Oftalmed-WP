@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name" : "oftalmed/hero",
+    "title" : "Главный баннер",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "hero.php"
+    },
+    "supports": {
+        "anchor": true,
+        "customClassName": true,
+        "align": ["full", "wide"]
+    },
+    "attributes": {
+        "align": {
+        "type": "string",
+        "default": "full"
+        }
+    } 
+}

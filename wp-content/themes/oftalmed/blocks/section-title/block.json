@@ -1,0 +1,19 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name" : "oftalmed/section-title",
+    "title" : "Заголовок секции",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "section-title.php"
+    },
+    "supports": {
+        "align": ["full", "wide"]
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    } 
+}

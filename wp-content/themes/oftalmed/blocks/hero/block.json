@@ -14,8 +14,8 @@
     },
     "attributes": {
         "align": {
-        "type": "string",
-        "default": "full"
+            "type": "string",
+            "default": "full"
         }
     } 
 }

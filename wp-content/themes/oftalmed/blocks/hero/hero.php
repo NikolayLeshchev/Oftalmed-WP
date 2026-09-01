@@ -1,9 +1,7 @@
 <?php
 /**
  * Hero block template
- *
- * @param array $block Данные блока от ACF
- */
+*/
 
 $id = $block['anchor'] ?? 'hero-' . $block['id'];
 $classes = ['hero'];
@@ -33,7 +31,7 @@ $mobile_image   = get_field('mobile_image');
 
                 <?php if ($heading): ?>
                     <h1 class="main-title">
-                        <?php echo $heading; ?>
+                        <?= wp_kses_post($heading) ?>
                     </h1>
                 <?php endif; ?>
 

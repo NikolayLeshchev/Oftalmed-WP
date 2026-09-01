@@ -1,15 +1,13 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
     "apiVersion": 3,
-    "name" : "oftalmed/hero",
-    "title" : "Главный баннер",
+    "name" : "oftalmed/section-title",
+    "title" : "Заголовок секции",
     "acf": {
         "mode": "preview",
-        "renderTemplate": "hero.php"
+        "renderTemplate": "section-title.php"
     },
     "supports": {
-        "anchor": true,
-        "customClassName": true,
         "align": ["full", "wide"]
     },
     "attributes": {

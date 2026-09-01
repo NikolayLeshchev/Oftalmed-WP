@@ -3,51 +3,29 @@
 					<div class="footer-wrapper">
 						<div class="footer-block">
 							<div class="footer-logo">
-								<a href="index.html" class="header__logo">
-									<img src="./assets/img/logo.svg" alt="">
-								</a>
-								<div class="footer-social">
-									<a href="#" class="social-link">
-										<iconify-icon icon="iconoir:instagram" width="22" height="22" noobserver=""></iconify-icon>
-									</a>
-									<a href="#" class="social-link">
-										<iconify-icon icon="meteor-icons:tiktok" width="20" height="20" noobserver=""></iconify-icon>
-									</a>
-								</div>
+								<?php the_custom_logo(); ?>
+
+								<?php if ( have_rows( 'socials', 'option' ) ) : ?>
+									<div class="footer-social" aria-label="Социальные сети">
+										<?php while ( have_rows( 'socials', 'option' ) ) : the_row(); 
+											$link = get_sub_field( 'social_link' );
+											$icon = get_sub_field( 'social_icon' );
+										?>
+											<a href="<?php echo esc_url( $link ); ?>" class="social-link" aria-label="Социальная сеть" target="_blank" rel="noopener noreferrer">
+												<iconify-icon icon="<?php echo esc_attr( $icon ); ?>" width="22" height="22" noobserver="" aria-hidden="true"></iconify-icon>
+											</a>
+										<?php endwhile; ?>
+									</div>
+								<?php endif; ?>
 							</div>
 							<div class="footer-navigate">
-								<nav>
-									<ul>
-										<li class="current-menu-item">
-											<a href="#">Ремонт очков</a>
-										</li>
-										<li>
-											<a href="#">Контактные линзы</a>
-										</li>
-										<li>
-											<a href="#">Оптика в Витебске</a>
-										</li>
-										<li>
-											<a href="#">Проверка зрения</a>
-										</li>
-										<li>
-											<a href="#">Офтальмолог</a>
-										</li>
-										<li>
-											<a href="#">Оптика рядом</a>
-										</li>
-										<li>
-											<a href="#">Подбор очков</a>
-										</li>
-										<li>
-											<a href="#">Детский офтальмолог</a>
-										</li>
-									</ul>
-								</nav>
+								<?php wp_nav_menu( array(
+									'theme_location' => 'footer_menu',
+								)); ?>
 							</div>
 						</div>
 						<div class="footer-bottom">
-							<div class="footer-bottom-copir">© 2026 Офтальмед. Все права защищены.</div>
+							<div class="footer-bottom-copir"><?php the_field('copywrite', 'options'); ?></div>
 							<div class="footer-bottom-link">
 								Разработка и дизайн
 								<a href="https://itg-soft.by/">

@@ -84,14 +84,14 @@
 
 		<link
 		rel="preload"
-		href="<?php echo get_template_directory_uri(); ?>/assets/fonts/gNMKW3F-SZuj7xmS-HY6EQ.woff2"
+		href="./assets/fonts/gNMKW3F-SZuj7xmS-HY6EQ.woff2"
 		as="font"
 		type="font/woff2"
 		crossorigin="anonymous"
 		>
 		<link
 		rel="preload"
-		href="<?php echo get_template_directory_uri(); ?>/assets/fonts/gNMKW3F-SZuj7xmf-HY.woff2"
+		href="./assets/fonts/gNMKW3F-SZuj7xmf-HY.woff2"
 		as="font"
 		type="font/woff2"
 		crossorigin="anonymous"
@@ -136,43 +136,38 @@
 			<header data-fls-header="" class="header" id="header">
 				<div class="header__container">
 					<div class="header-wrapper">
-						<a href="index.html" class="header__logo" aria-label="На главную">
-							<img src="./assets/img/logo.svg" alt="Логотип оптики">
-						</a>
+						<?php the_custom_logo(); ?>
 						<div class="header__menu menu">
 							<nav class="menu__body" aria-label="Основное меню навигации">
-								<ul class="menu__list">
-									<li >
-										<a href="glasses.html" class="menu__link" aria-label="Очки — каталог">Очки</a>
-									</li>
-									<li>
-										<a href="contact-lenses.html" class="menu__link" aria-label="Контактные линзы — каталог">Контактные линзы</a>
-									</li>
-									<li>
-										<a href="eyeglass-repair.html" class="menu__link" aria-label="Ремонт очков — услуги">Ремонт очков</a>
-									</li>
-									<li>
-										<a href="ophthalmologist.html" class="menu__link" aria-label="Врач-офтальмолог — запись">Врач-офтальмолог</a>
-									</li>
-									<li>
-										<a href="contacts.html" class="menu__link" aria-label="Контакты — адреса и телефоны">Контакты</a>
-									</li>
-								</ul>
-								<div class="mobile-heder-social" aria-label="Социальные сети">
-									<a href="#" class="social-link" aria-label="Инстаграм" target="_blank">
-										<iconify-icon icon="iconoir:instagram" width="22" height="22" noobserver="" aria-hidden="true"></iconify-icon>
-									</a>
-									<a href="#" class="social-link" aria-label="ТикТок" target="_blank">
-										<iconify-icon icon="meteor-icons:tiktok" width="20" height="20" noobserver="" aria-hidden="true"></iconify-icon>
-									</a>
-								</div>
+								<?php 
+									wp_nav_menu( array(
+										'theme_location' => 'header_menu',
+										'container'      => false,
+										'menu_class'     => 'menu__list',
+										'fallback_cb'    => false,
+									) );
+								?>
+								<?php if ( have_rows( 'socials', 'option' ) ) : ?>
+									<div class="mobile-heder-social" aria-label="Социальные сети">
+										<?php while ( have_rows( 'socials', 'option' ) ) : the_row(); 
+											$link = get_sub_field( 'social_link' );
+											$icon = get_sub_field( 'social_icon' );
+										?>
+											<a href="<?php echo esc_url( $link ); ?>" class="social-link" aria-label="Социальная сеть" target="_blank" rel="noopener noreferrer">
+												<iconify-icon icon="<?php echo esc_attr( $icon ); ?>" width="22" height="22" noobserver="" aria-hidden="true"></iconify-icon>
+											</a>
+										<?php endwhile; ?>
+									</div>
+								<?php endif; ?>
 							</nav>
 						</div>
 						<div class="header-buttons">
-							<a href="tel:+" class="button --green" aria-label="Позвонить нам по телефону">
+							<?php if(get_field('main_phone', 'options')) : ?>
+							<a href="tel:<?php the_field('main_phone', 'options'); ?>" class="button --green" aria-label="Позвонить нам по телефону">
 								<iconify-icon icon="lucide:phone" width="22" height="22" noobserver="" aria-hidden="true"></iconify-icon>
 								<span>Позвонить нам</span>
 							</a>
+							<?php endif; ?>
 							<a href="#data-choice" class="button --border" aria-label="Открыть список салонов для выбора">
 								<iconify-icon icon="majesticons:map-marker-line" width="24" height="24" noobserver="" aria-hidden="true"></iconify-icon>
 								<span>Выбрать салон</span>

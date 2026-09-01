@@ -10,9 +10,27 @@ function oftalmed_assets_include() {
 add_theme_support('post-thumbnails');
 add_theme_support( 'custom-logo' );
 
+// Add SVG support
+add_filter('upload_mimes', function($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    $mimes['svgz'] = 'image/svg+xml';
+    return $mimes;
+});
+
+add_filter('wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
+    if ( strpos( $filename, '.svg' ) !== false ) {
+        $data['ext']  = 'svg';
+        $data['type'] = 'image/svg+xml';
+    }
+    return $data;
+}, 10, 4);
+
+// Menu registration
 register_nav_menus( array(
     'header_menu' => 'Шапка сайта (Header Menu)',
+    'footer_menu' => 'Подвал сайта (Footer Menu)'
 ) );
+
 add_filter( 'nav_menu_link_attributes', function( $atts, $item, $args ) {
     if ( isset( $args->theme_location ) && $args->theme_location === 'header_menu' ) {
         $atts['class'] = 'menu__link';

@@ -1,16 +1,14 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
     "apiVersion": 3,
-    "name" : "oftalmed/hero",
-    "title" : "Баннер",
-    "description": "Баннер для главной страницы",
+    "name" : "oftalmed/title-banner",
+    "title" : "Баннер страницы",
+    "description": "Баннер с хлебными крошками и заголовком",
     "acf": {
         "mode": "preview",
-        "renderTemplate": "hero.php"
+        "renderTemplate": "title-banner.php"
     },
     "supports": {
-        "anchor": true,
-        "customClassName": true,
         "align": ["full", "wide"]
     },
     "attributes": {

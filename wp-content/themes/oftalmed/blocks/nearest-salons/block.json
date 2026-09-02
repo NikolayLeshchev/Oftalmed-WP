@@ -1,0 +1,22 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "acf/nearest-salons",
+    "title": "Ближайшие салоны",
+    "description": "Блок табов с адресами и подробной информацией о салонах",
+    "icon": "location-alt",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "nearest-salons.php"
+    },
+    "supports": {
+        "align": ["full", "wide"],
+        "anchor": true
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    } 
+}

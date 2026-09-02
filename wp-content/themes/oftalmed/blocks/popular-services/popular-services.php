@@ -11,7 +11,7 @@ $cards    = get_field( 'popular_cards' );
 
 <?php if($cards) : ?>
 
-<section id="<?= esc_attr($id) ?>"  class="popular  <?= esc_attr($customClass) ?>">
+<section id="<?= esc_attr($id) ?>"  class="popular <?= esc_attr($customClass) ?>">
     <div class="popular__container">
         <div class="popular-wrapper">
             <?php while(have_rows('popular_cards')): the_row(); ?>

@@ -53,48 +53,6 @@
 			<a data-fls-scrollup="" href="#" class="scroll-up">
 				<iconify-icon icon="ep:top" width="24" height="24" noobserver=""></iconify-icon>
 			</a>
-			<div id="choice" aria-hidden="true" class="popup">
-				<div data-popup-wrapper="" class="popup__wrapper">
-					<div data-popup-body="" class="popup__body">
-						<div data-popup-content="" class="popup__content">
-							<button data-popup-close="" type="button" class="popup__close">
-								<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#C0522A" stroke-width="3px" stroke-linecap="square"></path>
-									<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#C0522A" stroke-width="3px" stroke-linecap="square"></path>
-								</svg>
-							</button>
-							<div class="popup-content-wrapper">
-								<h2>Выберите ближайший салон</h2>
-								<p>
-									Выберите филиал, который вам удобнее посетить. После выбора мы покажем актуальную информацию для выбранного салона.
-								</p>
-								<div class="popup-content-buttons">
-									<a href="#" data-choice="kirova" class="button-link-nearest-salon">
-										<iconify-icon icon="majesticons:map-marker-line" width="24" height="24" noobserver=""></iconify-icon>
-										<span>Витебск, ул. Кирова, 2</span>
-									</a>
-									<a href="#" data-choice="frunze" class="button-link-nearest-salon">
-										<iconify-icon icon="majesticons:map-marker-line" width="24" height="24" noobserver=""></iconify-icon>
-										<span>Витебск, пр-т Фрунзе, 28</span>
-									</a>
-									<a href="#" data-choice="chkalova" class="button-link-nearest-salon">
-										<iconify-icon icon="majesticons:map-marker-line" width="24" height="24" noobserver=""></iconify-icon>
-										<span>Витебск, ул. Чкалова, 14 В</span>
-									</a>
-									<a href="#" data-choice="lenina" class="button-link-nearest-salon">
-										<iconify-icon icon="majesticons:map-marker-line" width="24" height="24" noobserver=""></iconify-icon>
-										<span>Витебск, ул. Ленина, 28</span>
-									</a>
-									<a href="#" data-choice="energetikov" class="button-link-nearest-salon">
-										<iconify-icon icon="majesticons:map-marker-line" width="24" height="24" noobserver=""></iconify-icon>
-										<span>Новолукомль, ул. Энергетиков, 9</span>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
         <?php wp_footer(); ?>
 	</body>

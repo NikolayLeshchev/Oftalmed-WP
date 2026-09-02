@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name" : "oftalmed/info-cards",
+    "title" : "Карточки с иконкой",
+    "description": "Гибкая сетка карточек с иконками",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "info-cards.php"
+    },
+    "supports": {
+        "align": ["full", "wide"],
+        "anchor": true
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    } 
+}

@@ -56,7 +56,7 @@ $mobile_image   = get_field('mobile_image');
                         <source srcset="<?= esc_url($mobile_image['url']) ?>" type="<?= esc_attr($mobile_image['mime_type']) ?>">
                         <img
                             src="<?= esc_url($mobile_image['url']) ?>"
-                            alt="<?= esc_attr($mobile_image['alt'] ?: 'Image') ?>"
+                            alt="<?= esc_attr($mobile_image['alt'] ?: esc_attr($heading)) ?>"
                         >
                     </picture>
                 </div>

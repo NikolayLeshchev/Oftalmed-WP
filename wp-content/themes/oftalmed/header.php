@@ -82,20 +82,8 @@
 		
 		</style>
 
-		<link
-		rel="preload"
-		href="./assets/fonts/gNMKW3F-SZuj7xmS-HY6EQ.woff2"
-		as="font"
-		type="font/woff2"
-		crossorigin="anonymous"
-		>
-		<link
-		rel="preload"
-		href="./assets/fonts/gNMKW3F-SZuj7xmf-HY.woff2"
-		as="font"
-		type="font/woff2"
-		crossorigin="anonymous"
-		>
+		<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/assets/fonts/gNMKW3F-SZuj7xmS-HY6EQ.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/assets/fonts/gNMKW3F-SZuj7xmf-HY.woff2" as="font" type="font/woff2" crossorigin="anonymous" >
 		<script>
 		(function() {
 			const removeLoading = () => {
@@ -126,7 +114,7 @@
 		}
 		</style>
 
-		<title><?php the_title(); ?></title>
+		
 
 		<?php wp_head(); ?>
 	</head>

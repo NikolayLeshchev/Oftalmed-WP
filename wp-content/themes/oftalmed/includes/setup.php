@@ -10,6 +10,10 @@ function oftalmed_assets_include() {
 add_theme_support('post-thumbnails');
 add_theme_support( 'custom-logo' );
 
+add_action('after_setup_theme', function() {
+    add_theme_support('title-tag');
+});
+
 // Add SVG support
 add_filter('upload_mimes', function($mimes) {
     $mimes['svg'] = 'image/svg+xml';

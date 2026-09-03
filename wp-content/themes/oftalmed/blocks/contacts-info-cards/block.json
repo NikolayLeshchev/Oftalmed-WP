@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name" : "oftalmed/contacts-info-cards",
+    "title" : "Карточки контактов",
+    "description": "Сетка карточек контактов",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "contacts-info-cards.php"
+    },
+    "supports": {
+        "align": ["full", "wide"],
+        "anchor": true
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    } 
+}

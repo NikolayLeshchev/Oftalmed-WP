@@ -54,7 +54,7 @@ $mobile_image   = get_field('mobile_image');
                 <div class="hero-image">
                     <picture>
                         <source srcset="<?= esc_url($mobile_image['url']) ?>" type="<?= esc_attr($mobile_image['mime_type']) ?>">
-                        <img
+                        <img fetchpriority="high"
                             src="<?= esc_url($mobile_image['url']) ?>"
                             alt="<?= esc_attr($mobile_image['alt'] ?: esc_attr($heading)) ?>"
                         >

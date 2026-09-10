@@ -60,3 +60,9 @@ add_action('after_setup_theme', function() {
 add_action( 'after_setup_theme', function() {
     add_theme_support( 'align-wide' );
 });
+
+
+// Contact Form 7 settings
+
+add_filter('wpcf7_load_js', '__return_false');
+add_filter('wpcf7_load_css', '__return_false');

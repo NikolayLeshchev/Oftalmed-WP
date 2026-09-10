@@ -1,0 +1,12 @@
+.wpcf7-not-valid-tip {
+    position: absolute;
+    bottom: -20px;
+}
+
+.contact-form-block textarea.input {
+    max-height: 145px;
+}
+
+.contact-form-block .wpcf7 form .wpcf7-response-output {
+    margin: 0;
+}

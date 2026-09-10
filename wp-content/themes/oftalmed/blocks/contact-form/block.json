@@ -1,0 +1,19 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "acf/contact-form",
+    "title": "Форма контактов с картой",
+    "description": "Секция с картой Яндекса и формой обратной связи",
+    "category": "theme",
+    "icon": "location-alt",
+    "keywords": ["contact", "form", "map", "карта"],
+    "style" : ["file:./contact-form.css"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "contact-form.php"
+    },
+    "supports": {
+        "align": ["full", "wide"],
+        "mode": true
+    }
+}

@@ -10,7 +10,7 @@ $cards    = get_field( 'info_cards' );
 ?>
 
 <?php if($cards) : ?>
-<section id="<?= esc_attr($id) ?>" class="why <?= esc_attr($customClass) ?>">
+<section id="<?= esc_attr($id) ?>" class="why <?= esc_attr($customClass) ?> <?= the_field('cards_per_row') ?>">
     <div class="why__container">
         <div class="why-wrapper">
             <?php while(have_rows('info_cards')): the_row(); ?>

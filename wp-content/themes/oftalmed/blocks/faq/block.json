@@ -1,0 +1,22 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name" : "oftalmed/faq",
+    "title" : "FAQ",
+    "description": "Секция вопросов и ответов",
+    "keywords": ["faq", "spoller", "accordion", "вопросы"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "faq.php"
+    },
+    "supports": {
+        "align": ["full", "wide"],
+        "anchor": true
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    } 
+}

@@ -8,7 +8,8 @@
         "renderTemplate": "section-title.php"
     },
     "supports": {
-        "align": ["full", "wide"]
+        "align": ["full", "wide"],
+        "anchor": true
     },
     "attributes": {
         "align": {

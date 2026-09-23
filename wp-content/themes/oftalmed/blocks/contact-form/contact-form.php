@@ -20,7 +20,7 @@ if (is_admin()) {
 // ACF Поля
 $title       = get_field('cf_title') ?: 'Остались вопросы? Напишите нам';
 $subtitle    = get_field('cf_subtitle') ?: 'Наши специалисты ответят и проконсультируют по всем интересующим вас вопросам';
-$cf7_shortcode = get_field('cf_shortcode'); // Шорткод Contact Form 7
+$cf7_shortcode = get_field('cf_shortcode'); 
 
 ?>
 
@@ -29,17 +29,12 @@ $cf7_shortcode = get_field('cf_shortcode'); // Шорткод Contact Form 7
         <div class="contact-form-wrapper">
             
             <div class="map" data-map="">
-                <!-- Контейнер самой карты (обязательно data-body) -->
                 <div class="map__body" data-body="" data-lat="55.190" data-lng="30.205" data-zoom="13"></div>
-                <!-- Витебск, ул. Кирова, 2 -->
+
                 <div class="map__marker" data-lat="55.190" data-lng="30.205" data-icon="<?php echo get_template_directory_uri(); ?>/assets/img/marker.svg" data-icon-size="32,32" data-icon-offset="-16,-32" data-title="ул. Кирова, 2" data-hint="Витебск, ул. Кирова, 2"></div>
-                <!-- Витебск, пр-т Фрунзе, 28 -->
                 <div class="map__marker" data-lat="55.185" data-lng="30.210" data-icon="<?php echo get_template_directory_uri(); ?>/assets/img/marker.svg" data-icon-size="32,32" data-icon-offset="-16,-32" data-title="пр-т Фрунзе, 28" data-hint="Витебск, пр-т Фрунзе, 28"></div>
-                <!-- Витебск, ул. Ленина, 28 -->
                 <div class="map__marker" data-lat="55.193" data-lng="30.199" data-icon="<?php echo get_template_directory_uri(); ?>/assets/img/marker.svg" data-icon-size="32,32" data-icon-offset="-16,-32" data-title="ул. Ленина, 28" data-hint="Витебск, ул. Ленина, 28"></div>
-                <!-- Витебск, ул. Чкалова, 14B -->
                 <div class="map__marker" data-lat="55.188" data-lng="30.215" data-icon="<?php echo get_template_directory_uri(); ?>/assets/img/marker.svg" data-icon-size="32,32" data-icon-offset="-16,-32" data-title="ул. Чкалова, 14B" data-hint="Витебск, ул. Чкалова, 14B"></div>
-                <!-- Новолукомль, ул. Энергетиков, 9 -->
                 <div class="map__marker" data-lat="54.662" data-lng="29.156" data-icon="<?php echo get_template_directory_uri(); ?>/assets/img/marker.svg" data-icon-size="32,32" data-icon-offset="-16,-32" data-title="ул. Энергетиков, 9" data-hint="Новолукомль, ул. Энергетиков, 9"></div>
             </div>
 
@@ -61,5 +56,3 @@ $cf7_shortcode = get_field('cf_shortcode'); // Шорткод Contact Form 7
         </div>
     </div>
 </section>
-
-<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш-api-ключ&lang=ru_RU"></script>

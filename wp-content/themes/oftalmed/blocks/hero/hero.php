@@ -41,8 +41,8 @@ $mobile_image   = get_field('mobile_image');
 
                 <?php if ($button_text && $button_link): ?>
                     <div class="hero-button">
-                        <a href="<?= esc_url($button_link) ?>" class="button --green">
-                            <iconify-icon icon="majesticons:map-marker-line" width="24" height="24"></iconify-icon>
+                        <a href="<?= esc_url($button_link) ?>" class="button --green" style="height: 56px;">
+                            <iconify-icon noobserver icon="majesticons:map-marker-line" width="24" height="24"></iconify-icon>
                             <span><?= esc_html($button_text) ?></span>
                         </a>
                     </div>

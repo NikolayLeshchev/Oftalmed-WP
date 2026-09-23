@@ -16,7 +16,6 @@ $bg_style = ! empty( $banner_bg['url'] ) ? 'style="background-image: url(' . esc
     <div class="top-section__container">
         <div class="top-section-wrapper">
             
-            <!-- Кастомные автоматические крошки -->
             <?php oftalmed_breadcrumbs(); ?>
 
             <div class="top-section-block">
@@ -35,9 +34,23 @@ $bg_style = ! empty( $banner_bg['url'] ) ? 'style="background-image: url(' . esc
             <picture>
                 <source srcset="<?= esc_url( $banner_bg_mob['url'] ); ?>" type="image/avif">
                 <img src="<?= esc_url( $banner_bg_mob['url'] ); ?>" 
-                     alt="<?= esc_attr( $banner_bg_mob['alt'] ?? $title ); ?>" 
-                     loading="lazy">
+                     alt="<?= esc_attr( $banner_bg_mob['alt'] ?? $title ); ?>" fetchpriority="high" />
             </picture>
         </div>
     <?php endif; ?>
 </section>
+
+<?php if ( empty( $banner_bg['url'] ) && empty( $banner_bg_mob['url'] ) ) : ?> 
+    <style>
+        .top-section {
+            min-height: initial;
+            margin-bottom: -40px;
+        }
+        .top-section-wrapper {
+            min-height: initial;
+        }
+        .top-section-block {
+            max-width: initial;
+        }
+    </style>
+<?php endif; ?>

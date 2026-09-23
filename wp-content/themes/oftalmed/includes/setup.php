@@ -3,7 +3,8 @@
 add_action('wp_enqueue_scripts', 'oftalmed_assets_include');
 
 function oftalmed_assets_include() {
-    wp_enqueue_style('theme-style', get_template_directory_uri() . '/assets/css/app.min.css', [], filemtime(get_template_directory() . '/assets/css/app.min.css'));
+    wp_enqueue_style('theme-style', get_template_directory_uri() . '/style.css', [], filemtime(get_template_directory() . '/style.css'));
+    wp_enqueue_style('site-style', get_template_directory_uri() . '/assets/css/app.min.css', [], filemtime(get_template_directory() . '/assets/css/app.min.css'));
     wp_enqueue_script('theme-script', get_template_directory_uri() . '/assets/js/app.min.js', [], filemtime(get_template_directory() . '/assets/js/app.min.js'), true);
 }
 
@@ -62,7 +63,23 @@ add_action( 'after_setup_theme', function() {
 });
 
 
-// Contact Form 7 settings
 
-add_filter('wpcf7_load_js', '__return_false');
-add_filter('wpcf7_load_css', '__return_false');
+// add_action('wp_enqueue_scripts', function() {
+//     $api_key = 'ВАШ_API_КЛЮЧ'; 
+//     if (!$api_key) return;
+
+//     if (has_block('acf/contact-form')) {
+//         $src = 'https://api-maps.yandex.ru/2.1/?' . http_build_query([
+//             'apikey' => $api_key,
+//             'lang'   => 'ru_RU',
+//         ]);
+
+//         wp_enqueue_script(
+//             'yandex-map-api', 
+//             $src, 
+//             [], 
+//             null, 
+//             ['strategy' => 'defer', 'in_footer' => true]
+//         );
+//     }
+// });

@@ -8,6 +8,7 @@
         "mode": "preview",
         "renderTemplate": "hero.php"
     },
+    "style" : ["file:./style.css"],
     "supports": {
         "anchor": true,
         "customClassName": true,

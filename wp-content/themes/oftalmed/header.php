@@ -89,7 +89,6 @@
 			const removeLoading = () => {
 				document.documentElement.removeAttribute('data-loading');
 			};
-
 			if (document.readyState === 'complete') {
 				(document.fonts?.ready || Promise.resolve()).then(removeLoading);
 			} else {
@@ -97,7 +96,6 @@
 				(document.fonts?.ready || Promise.resolve()).then(removeLoading);
 				});
 			}
-
 			setTimeout(removeLoading, 1000);
 		})();
 		</script>

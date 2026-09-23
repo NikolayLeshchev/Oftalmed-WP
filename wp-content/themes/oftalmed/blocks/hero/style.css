@@ -1,0 +1,8 @@
+@media (min-width: 768px) {
+    .hero {
+        height: 850px;
+    }
+    .hero-content .main-title{
+        max-width: 610px;
+    }
+}

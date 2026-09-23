@@ -18,7 +18,7 @@ $cards    = get_field( 'info_cards' );
                 <div class="why-card">
                     <?php if ($card_img): ?>
                         <div class="why-card__image">
-                            <img src="<?= esc_url($card_img['url']) ?>" alt="<?= esc_attr($card_img['alt'] ?: get_sub_field('card_title')) ?>" loading="lazy">
+                            <img width="48px" height="48px" src="<?= esc_url($card_img['url']) ?>" alt="<?= esc_attr($card_img['alt'] ?: get_sub_field('card_title')) ?>" loading="lazy">
                         </div>
                     <?php endif; ?>
                     <div class="why-card__title"><?= wp_kses_post(get_sub_field('card_title')); ?></div>

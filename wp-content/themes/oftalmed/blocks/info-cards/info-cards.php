@@ -23,6 +23,12 @@ $cards    = get_field( 'info_cards' );
                     <?php endif; ?>
                     <div class="why-card__title"><?= wp_kses_post(get_sub_field('card_title')); ?></div>
                     <div class="why-card__text"><?=  wp_kses_post(get_sub_field('card_text')); ?></div>
+                    <?php if(get_sub_field('card_link')): ?>
+                        <a href="<?= wp_kses_post(get_sub_field('card_link')); ?>" class="why-card__link">
+                            <?= wp_kses_post(get_sub_field('card_btn_title')); ?>
+                            <iconify-icon icon="akar-icons:arrow-right" width="22" height="22" noobserver=""></iconify-icon>
+                        </a>
+                    <?php endif; ?>
                 </div>
             <?php endwhile; ?>
         </div>

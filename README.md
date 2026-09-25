@@ -14,20 +14,20 @@
 
 - **CMS:** WordPress
 - **Core:** PHP 8.x, Advanced Custom Fields Pro (ACF Blocks)
-- **Frontend:** JavaScript (ES6+ / AJAX / Fetch API), SCSS/CSS3, HTML5
+- **Frontend:** JavaScript, SCSS/CSS3, HTML5
 ---
 
 ## 📂 Структура темы
 
 ```text
 oftalmed/
-├── assets/      # Скрипты, стили, шрифты и изображения
-├── blocks/      # Кастомные Gutenberg-блоки на ACF Pro
-├── includes/    # Модули темы (setup, performance)
-├── 404.php                  # Страница ошибки 404
-├── footer.php               # Подвал сайта
-├── functions.php            # Главный файл темы
-├── header.php               # Шапка сайта
-├── index.php                # Основной шаблон
-├── screenshot.png           # Превью темы
-└── style.css                # Метаданные темы
+├── assets/           # Скрипты, стили, шрифты и изображения
+├── blocks/           # Кастомные Gutenberg-блоки на ACF Pro
+├── includes/         # Модули темы (setup, performance)
+├── 404.php           # Страница ошибки 404
+├── footer.php        # Подвал сайта
+├── functions.php     # Главный файл темы
+├── header.php        # Шапка сайта
+├── index.php         # Основной шаблон
+├── screenshot.png    # Превью темы
+└── style.css         # Метаданные темы
